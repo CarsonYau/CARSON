@@ -17,15 +17,15 @@ $(document).ready(function(){
   });
 
   $("#1").click(function(){
-    $("").toggle();
+    $("#A1").toggle(500);
   });
 
-  $("2").click(function(){
-    $("p").toggle();
+  $("#2").click(function(){
+    $("#A2").toggle(500);
   });
   
-   $("3").click(function(){
-    $("p").toggle();
+   $("#3").click(function(){
+    $("#A3").toggle(500);
   });
   
 });
@@ -62,20 +62,20 @@ $(document).ready(function(){
 <ul>
   
   <li><b id="1">Button</b>
-  <ul>
+  <ul id="A1">
     <li>click the button to perform  actions</li>
     <li>HTML tag:  &lt;button id=&rdquo;xxx&rdquo;&gt;</li>
   </ul>
   </li>
   
   <li><b id="2">Text</b>
-   <ul>
+   <ul id="A2">
     <li>provide an area for entering and  display texts</li>
     <li>HTML tag:  &lt;input type=&rdquo;text&rdquo; id=&rdquo;xxx&rdquo; name=&rdquo;<em>nnn</em>&rdquo; value=&rdquo;<em>vvv</em>&rdquo;&gt;</li>
   </ul></li>
   
-  <li><b>Blocks</b>
-  <ul>
+  <li><b id="3">Blocks</b>
+  <ul id="A3">
     <li>a container for specifying a  region for having effects</li>
     <li>HTML tag: </li>
     <ul>
