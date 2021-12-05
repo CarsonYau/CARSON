@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+  $('#b1').on('click',function(){
+    $("#u1").toggle(500);
+  });
+  
+  $('#b2').on('click',function(){
+    $("#u2").toggle(500);
+  });
+  
+});
+</script>
+</head>
+<body>
+
+<h1 align="center"><b><u>HTML Dynamic Effects</u></b></h1>
+<OL>
+<LI><b>CSS  – effects</b>
+<ul>
+  <li>hover event: <a href="#">effect occurs when the mouse is move over an objects</a></li>
+  <li >Tooltips: showing more information It is a tooltip effect when move over a text </li>
+</ul>
+</LI>
+
+<LI><b>More  effects: (example)</b> <button id="b1">Hide/show</button>
+<ul id="u1">
+  <li>Dynamic hiding and showing</li>
+  <li>need to have a lot of objects</li>
+  <li>In many cases, we need to write program</li>
+</ul>
+</LI>
+
+<LI><b>Javascript  and jQuery</b> <button id="b2">Hide/show</button> 
+<ul id="u2">
+  <li><b>Javascript</b> is a common programming language in designing webpage</li>
+  <li>We have learn Basic programming concepts</li>
+  <li>jQuery: provide tools to simplify people in using advanced  Javascript functions</li>
+</ul>
+</LI>
+
+<LI>Common HTML objects are used in programming
+<ul>
+  <li><b>Button</b>:  <img src="hide_show_small.gif" ">
+  <ul>
+    <li>click the button to perform  actions</li>
+    <li>HTML tag:  &lt;button id=&rdquo;xxx&rdquo;&gt;</li>
+  </ul></li>
+  <li><b>Text</b> field: <img src="hide_show_small.gif" ">
+  <ul >
+    <li>provide an area for entering and  display texts</li>
+    <li>HTML tag:  &lt;input type=&rdquo;text&rdquo; id=&rdquo;xxx&rdquo; name=&rdquo;<em>nnn</em>&rdquo; value=&rdquo;<em>vvv</em>&rdquo;&gt;</li>
+  </ul></li>
+  <li><b>Blocks</b>: <img src="hide_show_small.gif" >
+  <ul>
+    <li>a container for specifying a  region for having effects</li>
+    <li>HTML tag: </li>
+    <ul>
+      <li>&lt;div&gt; … &lt;/div&gt;: a  paragraph block</li>
+      <li>&lt;span&gt; … &lt;/span&gt;: an  inline block</li>
+    </ul>
+  </ul></li>
+</ul>
+</LI>
+</OL>
+
+</body>
+</html>
