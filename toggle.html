@@ -16,9 +16,18 @@ $(document).ready(function(){
     $("#u2").toggle(500);
   });
 
-  $(".b").click(function(){
-    $(this).hide();
+  $("#1").click(function(){
+    $("").toggle();
   });
+
+  $("2").click(function(){
+    $("p").toggle();
+  });
+  
+   $("3").click(function(){
+    $("p").toggle();
+  });
+  
 });
 </script>
 </head>
@@ -51,12 +60,29 @@ $(document).ready(function(){
 
 <LI>Common HTML objects are used in programming
 <ul>
-  <li><b class="b">Button</b>
-
-  <li><b class="b">Text</b>
   
-  <li><b class="b">Blocks</b>
+  <li><b id="1">Button</b>
+  <ul>
+    <li>click the button to perform  actions</li>
+    <li>HTML tag:  &lt;button id=&rdquo;xxx&rdquo;&gt;</li>
+  </ul>
+  </li>
   
+  <li><b id="2">Text</b>
+   <ul>
+    <li>provide an area for entering and  display texts</li>
+    <li>HTML tag:  &lt;input type=&rdquo;text&rdquo; id=&rdquo;xxx&rdquo; name=&rdquo;<em>nnn</em>&rdquo; value=&rdquo;<em>vvv</em>&rdquo;&gt;</li>
+  </ul></li>
+  
+  <li><b>Blocks</b>
+  <ul>
+    <li>a container for specifying a  region for having effects</li>
+    <li>HTML tag: </li>
+    <ul>
+      <li>&lt;div&gt; … &lt;/div&gt;: a  paragraph block</li>
+      <li>&lt;span&gt; … &lt;/span&gt;: an  inline block</li>
+    </ul>
+  </ul></li>
 </ul>
 </LI>
 </OL>
