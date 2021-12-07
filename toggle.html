@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script>
-.noShow {display: none;}
-</script>
+<style>
+.noshow {display: none;}
+</style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
@@ -43,7 +43,7 @@ $(document).ready(function(){
 </LI>
 
 <LI><b>More  effects: (example)</b> <button id="b1">Hide/show</button>
-<ul id="u1">
+<ul id="u1" class="noshow">
   <li>Dynamic hiding and showing</li>
   <li>need to have a lot of objects</li>
   <li>In many cases, we need to write program</li>
@@ -51,7 +51,7 @@ $(document).ready(function(){
 </LI>
 
 <LI><b>Javascript  and jQuery</b> <button id="b2">Hide/show</button> 
-<ul id="u2">
+<ul id="u2" class="noshow">
   <li><b>Javascript</b> is a common programming language in designing webpage</li>
   <li>We have learn Basic programming concepts</li>
   <li>jQuery: provide tools to simplify people in using advanced  Javascript functions</li>
@@ -61,20 +61,20 @@ $(document).ready(function(){
 <LI>Common HTML objects are used in programming
 <ul>
   
-  <li><b id="1">Button</b>
+  <li><b id="1" class="noshow">Button</b>
   <ul id="A1">
     <li>click the button to perform  actions</li>
     <li>HTML tag:  &lt;button id=&rdquo;xxx&rdquo;&gt;</li>
   </ul>
   </li>
   
-  <li><b id="2">Text</b>
+  <li><b id="2" class="noshow">Text</b>
    <ul id="A2">
     <li>provide an area for entering and  display texts</li>
     <li>HTML tag:  &lt;input type=&rdquo;text&rdquo; id=&rdquo;xxx&rdquo; name=&rdquo;<em>nnn</em>&rdquo; value=&rdquo;<em>vvv</em>&rdquo;&gt;</li>
   </ul></li>
   
-  <li><b id="3">Blocks</b>
+  <li><b id="3" class="noshow">Blocks</b>
   <ul id="A3">
     <li>a container for specifying a  region for having effects</li>
     <li>HTML tag: </li>
