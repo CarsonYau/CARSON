@@ -10,6 +10,22 @@ p,a,input,label,textarea,span,ul,li {
     padding: 0% 0% 0% 0% !important;
     max-width: none !important;
 }
-#footer #left {
-    padding: 2%;
+footer{
+    margin-top: 10vh;
+    position: absolute;
+    background: rgb(66, 66, 66);
+    height: 30vw;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+}
+footer section{
+    padding: 3vw;
+}
+footer a{
+    color: #fff;
+    transition: 0.3s;
+}
+footer a:hover{
+    color: rgb(255, 0, 0);
 }
