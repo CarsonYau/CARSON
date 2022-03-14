@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <style>
     body {
         font-family: Arial, Helvetica, sans-serif;
@@ -40,14 +41,13 @@
         border: 1px solid black;
     }
 </style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script>
     function f1(){
         a=parseFloat($("#a").val());
         b=parseFloat($("#b").val());
         c=parseFloat($("#c").val());
 
-        slope=Math.round(-a/b*100)/100;
+        s=Math.round(-a/b*100)/100;
         yint=Math.round(c/b*100)/100;
         
         if(b>0){
@@ -57,21 +57,21 @@
             equation=a+"x"+b+"y="+c;
         }
 
-        $("#ans1").val(slope);
+        $("#ans1").val(s);
         $("#ans2").val(yint);
         $("#ans3").val(equation);
 
-        if (slope>0) {
+        if (s>0) {
             $("#leftdown").css("border","1px solid red");
         }
-        if (slope=0) {
+        else if (s==0) {
             $("#hori").css("border","1px solid red");
         }
-        if (slope<0) {
+        else if (s<0) {
             $("#rightdown").css("border","1px solid red");
         }
         else {
-            $("#up").css("border","1px solid red");
+            $("up").css("border","1px solid red");
         }
     }
 </script>
