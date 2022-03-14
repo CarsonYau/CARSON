@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    h1 {
+        font-size: 1.7em;
+    }
+    h2 {
+        font-size: 1.3em;
+        color: rgb(10, 60, 126);
+        text-align: left;
+        margin: 0 20vw 0 20vw;
+        background-color: grey;
+        padding: 1vh 1vw 1vh 1vw;
+        border-radius: 10px;
+    }
+    h3 {
+        text-align: left;
+        border-radius: 10px;
+        margin: 1vh 20vw 1vh 20vw;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    #ans1,#ans2,#ans3 {
+        font-size:1.3em;
+        color: red;
+    }
+    input {
+        font-size: 1.2em;
+    }
+    button {
+        font-size: 1.2em;
+    }
+    .graph {
+        border: 1px solid black;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function f1(){
+        a=parseFloat($("#a").val());
+        b=parseFloat($("#b").val());
+        c=parseFloat($("#c").val());
+
+        slope=Math.round(-a/b*100)/100;
+        yint=Math.round(c/b*100)/100;
+        
+        if(b>0){
+            equation=a+"x+"+b+"y="+c;
+        }
+        if(b<0){
+            equation=a+"x"+b+"y="+c;
+        }
+
+        $("#ans1").val(slope);
+        $("#ans2").val(yint);
+        $("#ans3").val(equation);
+
+        if (slope>0) {
+            $("#leftdown").css("border","1px solid red");
+        }
+        if (slope=0) {
+            $("#hori").css("border","1px solid red");
+        }
+        if (slope<0) {
+            $("#rightdown").css("border","1px solid red");
+        }
+        else {
+            $("#up").css("border","1px solid red");
+        }
+    }
+</script>
+</head>
+<body>
+    <h1>straight line equation: find slope and y-intercept</h1>
+    <img src="https://slideplayer.com/9751851/31/images/slide_1.jpg" width="300px">
+    
+    <h2>1. Ax+by=c</h2>
+    <p>input: <input type="text" id="a" size="2">x+<input type="text" id="b" size="2">y=<input type="text" id="c" size="2"> <button onclick="f1()">RUN</button></p>
+
+    <h2>2.Ax=C</h2>
+    <p>input <input type="text" id="a2" size="2">x=<input type="text" id="c2" size="2"> <button onclick="f2()">RUN</button></p>
+
+    <h2>3.By=C</h2>
+    <p>input <input type="text" id="b3" size="2">y=<input type="text" id="c3" size="2"> <button onclick="f3()">RUN</button></p>
+
+    <h2>Result</h2>
+    <h3>Slope = <input readonly="readonly" type="text" id="ans1"></p>
+    <h3>y-intercept = <input readonly="readonly" type="text" id="ans2"></p>
+    <h3>Equation = <input readonly="readonly" type="text" id="ans3"></h3>
+
+    <img id="hori" class="graph" src="https://cdn.discordapp.com/attachments/833310044539846717/952841741730463754/unknown.png" height="100" width="auto">
+    <img id="up" class="graph" src="https://cdn.discordapp.com/attachments/833310044539846717/952848209590513664/unknown.png" height="100" width="auto">
+    <img id="leftdown" class="graph" src="https://cdn.discordapp.com/attachments/833310044539846717/952842099752046622/unknown.png" height="100" width="auto">
+    <img id="rightdown" class="graph" src="https://cdn.discordapp.com/attachments/833310044539846717/952842117741416448/unknown.png" height="100" width="auto">
+</body>
+</html>

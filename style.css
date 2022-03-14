@@ -3,13 +3,31 @@ h1,h2,h3,h4,h5,h6 {
 }
 p,a,input,label,textarea,span,ul,li {
     font-family: Arial, Helvetica, sans-serif;
-}
+}   
 .containernav {
-    margin: 0% 0% 0% 0% !important;
-    padding: 0% 0% 0% 0% !important;
-    max-width: none !important;
-    background-color: rgb(66, 66, 66) !important;
+    background: rgb(66, 66, 66);
+    width: 100%;
+    height: 7vh;
+    position: fixed !important;
+    top: 0;
+    left: 0;    
+    display: flex;
+    align-items: center;
+    z-index: 10000; /*display on TOP*/
 }
+.containernav a {
+    transition: 0.3s;
+    font-size: 120%;
+}
+.containernav a:hover {
+    color: red;
+}
+.nav__link {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1em;
+}
+
 footer{
     margin-top: 10vh;
     position: absolute;

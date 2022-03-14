@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+function run1()
+{
+ a=parseFloat($("#a").val());
+ b=parseFloat($("#b").val());
+ c=parseFloat($("#c").val());
+ 
+ slope=Math.round(-a/b*100)/100;
+ yint=Math.round(c/b*100)/100;
+ 
+ $("#slope").val(slope);
+ $("#yint").val(yint);
+}
+
+</script>
+</head>
+<body>
+<p><strong>straight equation; find slope and y-intercept</strong></p>
+<p><span style="color: #ff6600;"><strong>1.ax+by=c</strong></span></p>
+
+<p>&nbsp; input : <input type=text id="a" size=2>x+<input type=text id='b' size=2>y=<input type=text id='c' size=2> <button onclick="run1()">run</button></p>
+
+<p><span style="color: #ff6600;"><strong>2.ax=c</strong></span></p>
+<p>&nbsp; input ax=c run</p>
+
+<p><span style="color: #ff6600;"><strong>3.by=c</strong></span></p>
+<p>&nbsp; input by=c run</p>
+
+<p>Result:</p>
+<p>equation: answer equations</p>
+<p>slope=<input class=ans type=text id='slope' size=4>, y-intercept=<input class=ans type=text id='yint' size=4></p>
+
+</body>
+</html>

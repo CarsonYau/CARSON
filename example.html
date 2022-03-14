@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<style>
+body {
+	text-align:center;
+  font-family:Arial;
+}
+button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition:0.2s;
+}
+button:hover {
+	background-color:#5baff5;
+}
+p,span {
+	font-size:20px;
+}
+input {
+  font-size:20px;
+}
+</style>
+<script>
+
+function go(){
+  var a=$("#age").val();
+  var b=$("#sex").val();
+  alert("your sex is "+b+" and age is "+a+" years old");
+}
+
+function slove(){
+//-a/b
+//c/a
+  var n1=$("#a").val();
+  var n2=$("#b").val();
+  var n3=$("#c").val();
+  parseFloat(n1);
+  parseFloat(n2);
+  parseFloat(n2);
+  //alert(n1,n2,n3);
+}
+</script>
+</head>
+<body>
+<div>
+  <span>AGE:</span>
+  <input id="age" type="text" size=4><br>
+</div>
+
+<div style="padding-top: 20px">
+  <span>SEX:</span>
+  <input id="sex" type="text" size=4><br>
+  <button onclick="go()">FIND</button>
+</div>
+
+<div style="padding: 10%;">
+  <hr>
+  <p>input a,b,c</p>
+  <p>find the slope and y-intercept of ax+by+c=0</p>
+  <input id="a" type="text" size="4"><span> x+</span>
+  <input id="b" type="text" size="4"><span> y+</span>
+  <input id="c" type="text" size="4"><span> =0</span>
+  <br>
+  <button onclick="slove()  ">slove</button>
+</div>
+</body>
+</html>
