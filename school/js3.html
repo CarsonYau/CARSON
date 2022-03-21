@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    span, p, input, button {
+        font-size: 1.3em;
+    }
+    div {
+        margin: 10px 10px 10px 10px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    function f1(){
+        b=parseFloat($("#1b").val());
+        c=parseFloat($("#1c").val());
+
+        if (c>b){
+            alert("B must be bigger");
+        }
+        else {
+        ansA=(b*b-c*c)**0.5;
+        ansA=Math.round(ansA*100)/100;
+
+        $("#ansA").val(ansA);
+        }
+    }
+    function f2(){
+        a=parseFloat($("#2a").val());
+        c=parseFloat($("#2c").val());
+
+        if (c>a){
+            alert("A must be bigger");
+        }
+        else {
+        ansB=(a*a-c*c)**0.5;
+
+        ansB=Math.round(ansB*100)/100;
+
+        $("#ansB").val(ansB);
+        }
+    }
+    function f3(){
+        a=parseFloat($("#3a").val());
+        b=parseFloat($("#3b").val());
+
+        ansC=(a*a+b*b)**0.5;
+
+        ansC=Math.round(ansC*100)/100;
+
+        $("#ansC").val(ansC);
+    }
+</script>
+</head>
+<body>
+    <h1>Pythagoras' theorem caculator</h1>
+    <img src="https://d26tpo4cm8sb6k.cloudfront.net/img/pythagorean-theorem.png">
+    <p>a<sup>2</sup>+b<sup>2</sup>=c<sup>2</sup>
+    <br>
+    Please input a,b,c according to this graph
+    </p>
+<div>
+    <h2>Caculate A</h2>
+    <span>B: </span><input id="1b" type="text" size="2">
+    <span>C: </span><input id="1c" type="text" size="2">
+    <button onclick="f1()">Caculate</button>
+</div>
+<div>
+    <h2>Caculate B</h2>
+    <span>A: </span><input id="2a" type="text" size="2">
+    <span>C: </span><input id="2c" type="text" size="2">
+    <button onclick="f2()">Caculate</button>
+</div>
+<div>
+    <h2>Caculate C</h2>
+    <span>A: </span><input id="3a" type="text" size="2">
+    <span>B: </span><input id="3b" type="text" size="2">
+    <button onclick="f3()">Caculate</button>
+</div>
+<div>
+    <span>A: </span><input id="ansA" type="text" readonly="readonly"><br>
+    <span>B: </span><input id="ansB" type="text" readonly="readonly"><br>
+    <span>C: </span><input id="ansC" type="text" readonly="readonly">
+</div>
+</body>
+</html>
