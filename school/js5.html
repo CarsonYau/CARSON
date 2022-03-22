@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function run1(){
+        r=4;
+        alert("your result is"+r);
+    }
+    function run2(){
+        r=4;
+        $("#r2").val("Your results is "+r);
+    }
+    function run3(){
+        r=4;
+        $("#r3").text("The result is "+r);
+        $("#h2").text("welcome "+r);
+        $("#h2").css("color","#FF0000");
+    }
+    function run4(){
+        r=4;
+        $("#r4").html("<a href='https://google.com' target='_blank'>your result is </a>"+r)
+    }
+    function run51(){
+        $("#r5").css("color","red");
+        $("#r5").css("font-size","24px");
+    }
+    function run52(){
+        $("#r5").css("color","green");
+        $("#r5").css("font-size","16px");
+    }
+    function run53(){
+        $("#r5").css("color","blue");
+        $("#r5").css("font-size","24px");
+    }
+    function run54(){
+        $("#r5").html("");
+    }
+    function run55(){
+        $("#r5").html("appear");
+    }
+    function run61(){
+        $("#r6").attr('src','https://media.istockphoto.com/photos/airplane-on-white-background-isolated-3d-illustration-picture-id1157967047?k=20&m=1157967047&s=612x612&w=0&h=8LuFWi8M5yEfxcNJeLhy7LjQsfI94ADx18ORF8dWdRw=');
+        $("#r6").attr('width','700px');
+    }
+    function run62(){
+        $("#r6").attr('src','https://media.istockphoto.com/photos/airplane-on-white-background-isolated-3d-illustration-picture-id1157967047?k=20&m=1157967047&s=612x612&w=0&h=8LuFWi8M5yEfxcNJeLhy7LjQsfI94ADx18ORF8dWdRw=');
+        $("#r6").attr('height','700px');
+    }
+    function run63(){
+        $("#r6").attr('src','https://media.istockphoto.com/photos/airplane-on-white-background-isolated-3d-illustration-picture-id1157967047?k=20&m=1157967047&s=612x612&w=0&h=8LuFWi8M5yEfxcNJeLhy7LjQsfI94ADx18ORF8dWdRw=');
+        $("#r6").attr('width',"100px");
+        $("#r6").attr('height',"100px");
+    }
+    function run64(){
+        $("#r6").attr('src','https://media.istockphoto.com/photos/airplane-on-white-background-isolated-3d-illustration-picture-id1157967047?k=20&m=1157967047&s=612x612&w=0&h=8LuFWi8M5yEfxcNJeLhy7LjQsfI94ADx18ORF8dWdRw=');
+        $("#r6").attr('width',"1000px");
+        $("#r6").attr('height',"1000px");
+    }
+    function run65(){
+        $("#r6").attr('src','https://cdn.unwire.hk/wp-content/uploads/2019/03/FormulaE_Bose_01.png');
+    }
+    function run66(){
+        $("#r6").attr('width',"500px");
+        $("#r6").attr('height',"auto");
+    }
+    function run(){
+        a=parseFloat($("#a").val());
+        b=parseFloat($("#b").val());
+        c=parseFloat($("#c").val());
+
+        if (a==0){
+            $("#ansA").text("");
+        }
+
+        if (a!=0){
+            $("#ansA").text(a+"x");
+        }
+
+        if (b==0){
+            $("#ansB").text("");
+        }
+
+        if (b!=0){
+            $("#ansB").text(b+"y");
+        }
+        if (c==0){
+            $("ansC").text("0");
+        }
+        if (c!=0){
+            $("#ansC").text(c);
+        }
+    }
+</script>
+</head>
+<body>
+    <h2>Different ways of <span id="h2">showing</span> the output</h2>
+<p>
+    1. Show in an alert box 
+    <button onclick="run1()">Show me</button>
+</p>
+<p>
+    2. Show in a text box <input id="r2" type="text">
+    <button onclick="run2()">Show me</button>
+</p>
+<p>
+    3. Show in an object <strong id="r3">result</strong>
+    <button onclick="run3()">Show me</button>
+</p>
+<p>
+    4. Show in an object with HTML effect <span id="r4">"results"</span> 
+    <button onclick="run4()">Show me</button>
+</p>
+<p>
+    5. Change CSS of an <span id="r5">OBJECT</span><br>
+    <button onclick="run51()">RED 24</button>
+    <button onclick="run52()">GREEN 16</button>
+    <button onclick="run53()">Blue 24</button>
+    <button onclick="run54()">hidden</button>
+    <button onclick="run55()">appear</button>
+</p>
+<p>
+    6. Change properties of an object<br>
+    <button onclick="run61()">width</button>
+    <button onclick="run62()">height</button>
+    <button onclick="run63()">small</button>
+    <button onclick="run64()">big</button>
+    <button onclick="run65()">car</button>
+    <button onclick="run66()">RESET</button>
+    <br>
+    <img id="r6" width="500px" height="auto" src="https://media.istockphoto.com/photos/airplane-on-white-background-isolated-3d-illustration-picture-id1157967047?k=20&m=1157967047&s=612x612&w=0&h=8LuFWi8M5yEfxcNJeLhy7LjQsfI94ADx18ORF8dWdRw=">
+    <hr>
+</p>
+<p>
+    Example: Show a linear equation properly<br>
+    Input A,B,C of the equation Ax+Bx=C
+</p>
+<p>
+    <input id="a" type="text" size="2"> x+
+    <input id="b" type="text" size="2"> y=
+    <input id="c" type="text" size="2">
+    <button onclick="run()">Show me</button><br>
+    The result is <span id="ansA">Ax +</span id="ansB"><span>By</span id="ansC"> = <span>C</span>
+</p>
+</body>
+</html>
