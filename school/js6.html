@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function run() {
+        a=$("#abc").val().split(",").map(Number);
+        b=$("#def").val().split(",").map(Number);
+
+        K=a[0]*a[1]-a[1]*b[0];
+
+        if (K==0){
+            x=("no solution");
+            y=("no solution");
+        }
+        else {
+            x=(a[2]*b[1]-a[1]*b[2])/K;
+            y=(a[0]*b[2]-a[2]*b[0])/K;
+        }
+        
+        $("#ansx").text(x);
+        $("#ansy").text(y);
+    }
+</script>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+        font-size: 24px;
+        padding: 5vh 5vw 5vh 5vw;
+    }
+    button {
+        font-size: 24px;
+        background-color: rgb(255, 255, 255);
+    }
+    input {
+        font-size: 24px;
+    }
+    p {
+        text-align: left;
+        padding: 0 20vw 0 20vw;
+    }
+</style>
+</head>
+<body>
+<h1>simultaneous equation calculator</h1>
+<p>
+    ax+by=0, input a,b,c <br><input type="text" id="abc"><br>
+    dx+ey=0, input d,e,f <br><input type="text" id="def"><br>
+    <button onclick="run()">run</button><br>
+    x=<span id="ansx"></span><br>
+    y=<span id="ansy"></span>
+</p>
+</body>
+</html>
