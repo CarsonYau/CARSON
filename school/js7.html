@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    body {
+        font-size: 24px;
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 10vw 0 10vw;
+    }
+    input {
+        font-size: 24px;
+    }
+    button {
+        font-size: 24px;
+    }
+    textarea {
+        font-size: 24px;
+    }
+</style>
+<script>
+    function f1() {
+        a=$("#date").val().split("/").map(Number);
+        alert("day: "+a[0]+", month: "+a[1]+", year: "+a[2]);
+    }
+    function f2() {
+        a2=$("#date2").val().split("-").map(Number);
+        alert("year: "+a2[0]+", month: "+a2[1]+", day: "+a2[2]);
+    }
+    function f3() {
+        //f=["Apple","Orange",.....]
+        f=$("#fruit").val().split(",");
+        f2=parseInt($("#fruit2").val());
+
+       r=f[f2];
+
+        alert("your favourite fruit is "+r);
+    }
+</script>
+</head>
+<body>
+    input a date<br>
+    <input type="text" id="date"> (dd/mm/yyyy) <button onclick="f1()">submit</button>
+    <br>
+    
+    input a date<br>
+    <input type="date" id="date2"> <button onclick="f2()">submit</button>
+    <br>
+
+    fruit lists:<br>
+    <textarea cols="50" rows="2" id="fruit">0.Apple,1.Orange,2.Mango,3.Lemon,4.Water Melon,5.Pineapple,6.Pear,7.Coconut,8.Banana</textarea>
+    <br>
+    your favourite fruit's number: <input type="text" id="fruit2"><button onclick="f3()">submit</button>
+    <br>
+
+    
+</body>
+</html>
