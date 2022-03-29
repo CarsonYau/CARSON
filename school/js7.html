@@ -15,7 +15,7 @@
     button {
         font-size: 24px;
     }
-    textarea {
+    textarea,span {
         font-size: 24px;
     }
 </style>
@@ -37,23 +37,44 @@
 
         alert("your favourite fruit is "+r);
     }
+    function f4() {
+        a=$("#sum").val().split(",").map(Number);
+        ans=a[0]+a[1]+a[2]+a[3]+a[4]+a[5]+a[6];
+        $("#ans").html(ans);
+    }
+    function f5() {
+        w=$("#word").text().split(" ");
+        r=w[0]+"<br>"+w[1]+"<br>"+w[2]+"<br>"+w[3]+"<br>"+w[4]+"<br>"+w[5]+"<br>"+w[6];
+        $("#ans2").html(r);
+    }
 </script>
 </head>
 <body>
     input a date<br>
     <input type="text" id="date"> (dd/mm/yyyy) <button onclick="f1()">submit</button>
     <br>
-    
+<hr>
     input a date<br>
     <input type="date" id="date2"> <button onclick="f2()">submit</button>
     <br>
-
+<hr>
     fruit lists:<br>
     <textarea cols="50" rows="2" id="fruit">0.Apple,1.Orange,2.Mango,3.Lemon,4.Water Melon,5.Pineapple,6.Pear,7.Coconut,8.Banana</textarea>
     <br>
     your favourite fruit's number: <input type="text" id="fruit2"><button onclick="f3()">submit</button>
     <br>
-
-    
+<hr>
+    find the sum of numbers:
+    <input type="text" id="sum" value="1,2,3,4,5,6,7"><button onclick="f4()">find sum</button>
+    <br>
+    the sum is <span id="ans"></span>
+<hr>
+    a line of text
+    <br>
+    <span id="word">this is a line with many word</span>
+    <br>
+    <button onclick="f5()">take out words</button>
+    <br>
+    <span id="ans2"></span>
 </body>
 </html>
