@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    body {
+        font-size: 24px;
+        text-align: left;
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 0 10vw 0 10vw;
+    }
+    p,input,button,span {
+        font-size: 24px;
+    }
+</style>
+<script>
+    function f1() {
+        var ans1=["zero","one","two","three","four","five","six","seven","eight","nine","ten","leven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
+        var ans2=["one","two","three","four","five","six","seven","eight","nine"];
+
+        a=$("#a").val().split("").map(Number);
+        a=parseInt($("#n").val());
+
+        if (a<19) {
+            r=ans1[a];
+        }
+
+        if (a==100) {
+            r="one hundred";
+        }
+
+        if (a>20 && a<100) {
+            r=ans2[p[0]];
+            if (p[1]>0) {
+                r=ans2[p[0]]+" "+ans1[p[1]];
+            }
+        }
+        $("#ans").text(r);
+    }
+</script>
+</head>
+<body>
+
+<h1>Translate numbers to english</h1>
+<p>input number(1-100): <input type="text" id="a" size="2"><button onclick="f1()">translate</button></p>
+<p>english: <span id="ans"></span></p>
+</body>
+</html>
