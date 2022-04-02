@@ -15,27 +15,27 @@
 </style>
 <script>
     function f1() {
-        var ans1=["zero","one","two","three","four","five","six","seven","eight","nine","ten","leven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
-        var ans2=["one","two","three","four","five","six","seven","eight","nine"];
+        var ans1=["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen"];
+        var ans2=["","","twenty","thirty","forty","fifty","sixty","seventy","eighty","ninety"];
 
-        a=$("#a").val().split("").map(Number);
-        a=parseInt($("#n").val());
+        p=$("#a").val().split("").map(Number);
+        a=parseInt($("#a").val());
 
         if (a<19) {
-            r=ans1[a];
+            ans=ans1[a];
         }
 
         if (a==100) {
-            r="one hundred";
+            ans="one hundred";
         }
 
-        if (a>20 && a<100) {
-            r=ans2[p[0]];
+        if (a>=20 && a<100) {
+            ans=ans2[p[0]];
             if (p[1]>0) {
-                r=ans2[p[0]]+" "+ans1[p[1]];
+                ans=ans2[p[0]]+" "+ans1[p[1]];
             }
         }
-        $("#ans").text(r);
+        $("#ans").text(ans);
     }
 </script>
 </head>
