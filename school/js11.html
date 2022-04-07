@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    input {
+        margin: 5px 5px 5px 5px;
+        border: 1px solid black;
+    }
+</style>
+<script>
+    for (let i = 0; i <=99; i++){
+        if (i%10==0) {
+            document.write("<br>");
+        }
+        document.write("<input type='text' size='1' class='box' id='t"+i+"'>");
+    }
+    function f1() {
+        for (let i = 0; i <= 99; i++) {
+            $("#t"+i).css("background-color","yellow");
+        }
+    }
+    function f2() {
+        for (let i = 0; i <=99 ; i++) {
+            if (i%3==1){
+                $("#t"+i).css("border","none");
+            }
+        }
+    }
+    function f3() {
+        for (let i = 0; i <= 99; i++) {
+            j=Math.floor(Math.random()*100)+0;
+            $("#t"+j).css("background-color","green");
+        }
+    }
+    function f4() {
+        $(".box").css("background-color","white");
+        $(".box").css("border","1px solid black");
+        $(".box").css("color","black");
+        $(".box").val("");
+    }
+    function f5() {
+        for (i=0;i<=99;i++){
+            $("#t"+i).val(i).css("color","blue");
+        }
+    }
+    function f6() {
+        n=$("#text1").val().split("");
+        for (i=0;i<=99;i++){
+            $("#t"+i).val(n[i]);
+        }
+    }
+    function f7() {
+        n2=$("text2").val().split(",");
+        for (let i = 0; i <= 99; i++) {
+            if (i%10==1) {
+                $("#t"+i).val(n2[i]);
+            }
+        }
+    }
+</script>
+</head>
+<body>
+<div>
+    <button onclick="f1()">all yellow</button> 
+    <button onclick="f2()">clear border</button>
+    <button onclick="f5()">number</button>
+    <button onclick="f3()">random green</button>
+    <button onclick="f4()">reset</button>
+    <br>
+    <input type="text" value="hello" id="text1"> <button onclick="f6()">run</button>
+</div>
+<div>
+    <p>input integers (MAX 10) and separate with comma</p>
+    <input type="text" value="1,2,3,4,5" id="text2"> <button onclick="f7()">run</button>
+</div>
+</body>
+</html>
