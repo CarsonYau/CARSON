@@ -7,6 +7,10 @@
         margin: 5px 5px 5px 5px;
         border: 1px solid black;
     }
+    body {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
 </style>
 <script>
     for (let i = 0; i <=99; i++){
@@ -51,11 +55,51 @@
         }
     }
     function f7() {
-        n2=$("text2").val().split(",");
-        for (let i = 0; i <= 99; i++) {
-            if (i%10==1) {
-                $("#t"+i).val(n2[i]);
+        var n2=$("#text2").val().split(",").map(Number);
+
+        $("#t0").val(n2[0]);
+            for (i=1;i<=n2[0];i++){
+                $("#t"+i).css("background-color","green");
             }
+        $("#t10").val(n2[1]);
+            for (i=1;i<=n2[1];i++){
+                $("#t1"+i).css("background-color","green");
+        }
+        $("#t20").val(n2[2]);
+            for (i=1;i<=n2[2];i++){
+                $("#t2"+i).css("background-color","green");
+        }
+        $("#t30").val(n2[3]);
+            for (i=1;i<=n2[3];i++){
+                $("#t3"+i).css("background-color","green");
+        }
+        $("#t40").val(n2[4]);
+            for (i=1;i<=n2[4];i++){
+                $("#t4"+i).css("background-color","green");
+        }
+        $("#t50").val(n2[5]);
+            for (i=1;i<=n2[5];i++){
+                $("#t5"+i).css("background-color","green");
+        }
+        $("#60").val(n2[6]);
+            for (i=1;i<=n2[6];i++){
+                $("#t6"+i).css("background-color","green");
+        }
+        $("#t70").val(n2[7]);
+            for (i=1;i<=n2[7];i++){
+                $("#t7"+i).css("background-color","green");
+        }
+        $("#t80").val(n2[8]);
+            for (i=1;i<=n2[8];i++){
+                $("#t8"+i).css("background-color","green");
+        }
+        $("#t90").val(n2[9]);
+            for (i=1;i<=n2[9];i++){
+                $("#t9"+i).css("background-color","green");
+        }
+        $("#t100").val(n2[10]);
+            for (i=1;i<=n2[10];i++){
+                $("#t10"+i).css("background-color","green");
         }
     }
 </script>
@@ -72,7 +116,7 @@
 </div>
 <div>
     <p>input integers (MAX 10) and separate with comma</p>
-    <input type="text" value="1,2,3,4,5" id="text2"> <button onclick="f7()">run</button>
+    <input type="text" value="0,1,2,3,4,5,6,7,8,9" id="text2"> <button onclick="f7()">run</button> <button onclick="f4()">reset</button>
 </div>
 </body>
 </html>
