@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    div {
+        margin: 10px;
+    }
+    input,button,div {
+        font-size: 24px;
+    }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    function f1() {
+        $("#b").hide();
+        $("#div1").show();
+        ans=Math.floor(Math.random()*100)+1;
+    }
+    function f2() {
+        n=parseFloat($("#num").val());
+    
+        if (n==ans) {
+            $("#ans").text("Correct!");
+            $("#hint").text("");
+        }
+
+        if (n<ans) {
+            $("#ans").text("too small");
+            $("#hint1").text(n);
+        }
+
+        if (n>ans) {
+            $("#ans").text("too big");
+            $("#hint2").text(n);
+        }
+    }
+</script>
+</head>
+<body>
+<div>
+    <h1>Number Guessing Game</h1>
+    <p>guess a number between 1-100</p>
+    <button id="b" onclick='f1()'>start</button>
+</div>
+<div id="div1" style="display: none;">
+    <input id='num' type='text'> <button onclick="f2()">done</button>
+    <p id="hint">Hint: Guess an integer between <span id="hint1">1</span> and <span id="hint2">100</span></p>
+    <span id="ans"></span>
+</div>
+
+</body>
+</html>
