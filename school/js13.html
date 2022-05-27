@@ -3,6 +3,13 @@
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <style>
+    html {
+        text-align: center;
+    }
+    span {
+        font-size: 40px;
+        padding: 1vh 0 1vh 0;
+    }
     div {
         padding: 10px;
     }
@@ -29,8 +36,9 @@ function start(){
 </script>
 </head>
 <body>
-<button onclick="start()">START</button><br>
+
 <div>
+<span><button onclick="start()">START</button><br></span>
 <button class="show" id="b1" onclick="run(1)">1</button>
 <button class="show" id="b2" onclick="run(2)">2</button>
 <button class="show" id="b3" onclick="run(3)">3</button>
