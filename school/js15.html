@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+    html {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    p {
+        text-align: center;
+    }
+    #main {
+        /*width: 350px;*/
+        text-align: center;
+    }
+    input,button,span {
+        font-size: 24px;
+    }
+    #div2 {
+        margin: 0 10vw 0 10vw;
+    }
+    #div3 button {
+        margin: 0 10vw 0 10vw;
+    }
+    #div3 {
+        display: none;
+    }
+</style>
+<script>
+var bg=[];
+var ran=[];
+function start(){
+  r="";
+  for (i=1;i<=100;i=i+1)
+  {
+    bg[i]=0;
+    r=r+"<button onclick='c1("+i+")' class='show' id='b"+i+"' onclick='run("+i+")'>";
+    r=r+i;
+    r=r+"</button> ";
+    if (i% 10==0) {
+        r=r+"<br>";
+    }
+  }
+  $("#main").html(r);
+  $("#div3").css("display","inline");
+  $('#start').css('display','none');
+}
+
+function c1(p) {
+    if (bg[p]==0) {
+        $("#b"+p).css('background-color','white');
+        $("#b"+p).css('color','blue');
+        bg[p]=1;
+    }
+    else {
+        $("#b"+p).css('background-color','#EEEEEE');
+        $("#b"+p).css('color','black');
+        bg[p]=0;
+    }
+}
+
+function clear() {
+    for (let i = 0; i <= 100; i++) {
+        bg[i]=0;
+        $("#b"+i).text(" ");
+    } 
+}
+
+function e1() {
+    for (let i = 0; i <=100; i++) {
+        if (i%3==0) {
+            $("#b"+i).css('background-color','aqua');
+        } else {
+            $("#b"+i).css('background-color','#EEEEEE');
+        }
+    }
+}
+/*function gen() {
+    for (let i = 1; i <= 100; i++) {
+        ran[i]=Math.floor(Math.random()*200+100);
+    }
+    for (let i = 1; i <= 100; i++) {
+        $("#b"+i).text(ran[i]);
+    }
+}
+
+function total() {
+    var tot=0;
+    for (let i = 1; i <= 100; i++) {
+        tot=tot+ran[i];
+    }
+    $("#total").val(tot);
+}
+
+function max() {
+    var max=0;
+    for (let i = 0; i < 100; i++) {
+        if (max < ran[i]) {
+            max = ran[i];
+        }
+    }
+    $("#max").val(max);
+}
+
+function min() {
+    var min=99999999999999;
+    for (let i = 0; i < 100; i++) {
+        if (min > ran[i]) {
+            min = ran[i];
+        }
+    }
+    $("#min").val(min);
+}
+
+function find() {
+    var find=0;
+    var posit=0;
+    find = $("#find").val();
+    for (let i = 0; i < 100; i++) {
+        if (find == ran[i]) {
+            find = ran[i];
+            posit = i;
+        }
+    }
+    $("#b"+posit).css('color','red');
+}
+*/
+
+
+</script>
+<style>
+    .show {width: 30px;height:20px;font-size:10pt;padding:0px}
+</style>
+</head>
+<body>
+<h1 style="text-align:center"> Algorithm - data proessing</h1>
+<p><button id='start' onclick="start()">Start</button></p>
+
+<div id='main'>
+</div>
+
+<hr>
+
+<div id="div2">
+<!--
+    <button onclick="gen()">Generate</button>
+    <br>
+    <button onclick="total()">Find total</button><input id="total" type="text" readonly="readonly">
+    <br>
+    <button onclick="max()">Find MAX</button><input id="max" type="text" readonly="readonly">
+    <br>
+    <button onclick="min()">Find MIN</button><input id="min" type="text" readonly="readonly">
+    <br>
+    
+    <span>enter number you want to find: </span><input id="find" type="text"><br>
+    <button onclick="find()">Find specific number</button>
+-->
+</div>
+<div id="div3">
+    <button onclick="clear()">clear</button><br>
+    <button onclick="e1()">effect 1</button><br>
+    <button onclick="e2()">effect 2</button><br>
+    <button onclick="e3()">effect 3</button><br>
+    <button onclick="e4()">effect 4</button>
+</div>
+</body>
+</html>
